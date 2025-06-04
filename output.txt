@@ -1,0 +1,80 @@
+
+Experimental results with model transformer on subtype COV19:
+Class imbalances:
+ Training 0.502
+ Testing  0.510
+Epoch 9 Time  0m 33s
+T_loss 0.458	T_acc 0.722	T_pre 0.776	T_rec 0.747	T_fscore 0.761	T_mcc 0.542
+V_loss 0.694	V_acc 0.655	V_pre 0.726	V_rec 0.478	V_fscore 0.576	V_mcc 0.325
+Epoch 19 Time  1m  5s
+T_loss 0.346	T_acc 0.779	T_pre 0.856	T_rec 0.784	T_fscore 0.818	T_mcc 0.657
+V_loss 0.886	V_acc 0.596	V_pre 0.577	V_rec 0.660	V_fscore 0.616	V_mcc 0.197
+Epoch 29 Time  1m 37s
+T_loss 0.323	T_acc 0.779	T_pre 0.852	T_rec 0.789	T_fscore 0.819	T_mcc 0.672
+V_loss 1.268	V_acc 0.605	V_pre 0.568	V_rec 0.818	V_fscore 0.670	V_mcc 0.239
+Epoch 39 Time  2m 10s
+T_loss 0.328	T_acc 0.772	T_pre 0.817	T_rec 0.819	T_fscore 0.818	T_mcc 0.652
+V_loss 1.146	V_acc 0.618	V_pre 0.643	V_rec 0.497	V_fscore 0.561	V_mcc 0.239
+Epoch 49 Time  2m 42s
+T_loss 0.259	T_acc 0.800	T_pre 0.858	T_rec 0.833	T_fscore 0.845	T_mcc 0.695
+V_loss 1.411	V_acc 0.617	V_pre 0.616	V_rec 0.584	V_fscore 0.599	V_mcc 0.234
+Epoch 59 Time  3m 15s
+T_loss 0.244	T_acc 0.809	T_pre 0.875	T_rec 0.833	T_fscore 0.854	T_mcc 0.713
+V_loss 1.609	V_acc 0.615	V_pre 0.600	V_rec 0.648	V_fscore 0.623	V_mcc 0.232
+Epoch 69 Time  3m 49s
+T_loss 0.244	T_acc 0.807	T_pre 0.856	T_rec 0.854	T_fscore 0.855	T_mcc 0.712
+V_loss 1.551	V_acc 0.611	V_pre 0.605	V_rec 0.598	V_fscore 0.601	V_mcc 0.222
+Epoch 79 Time  4m 22s
+T_loss 0.236	T_acc 0.812	T_pre 0.864	T_rec 0.854	T_fscore 0.859	T_mcc 0.721
+V_loss 1.826	V_acc 0.609	V_pre 0.609	V_rec 0.570	V_fscore 0.589	V_mcc 0.218
+Epoch 89 Time  4m 54s
+T_loss 0.231	T_acc 0.809	T_pre 0.851	T_rec 0.865	T_fscore 0.858	T_mcc 0.715
+V_loss 1.981	V_acc 0.620	V_pre 0.612	V_rec 0.612	V_fscore 0.612	V_mcc 0.239
+Epoch 99 Time  5m 27s
+T_loss 0.239	T_acc 0.806	T_pre 0.858	T_rec 0.848	T_fscore 0.853	T_mcc 0.713
+V_loss 1.945	V_acc 0.618	V_pre 0.614	V_rec 0.596	V_fscore 0.605	V_mcc 0.236
+Best results: Epoch 9 
+ V_loss 0.694	V_acc 0.655	V_pre 0.726	V_rec 0.478	V_fscore 0.576	V_mcc 0.325
+
+Experimental results with model mutagan on subtype COV19:
+Class imbalances:
+ Training 0.502
+ Testing  0.510
+Epoch 9 Time  2m 34s
+T_loss 0.559	T_acc 0.659	T_pre 0.676	T_rec 0.765	T_fscore 0.718	T_mcc 0.398
+V_loss 0.655	V_acc 0.620	V_pre 0.599	V_rec 0.680	V_fscore 0.637	V_mcc 0.243
+Epoch 19 Time  5m 11s
+T_loss 0.409	T_acc 0.745	T_pre 0.793	T_rec 0.784	T_fscore 0.788	T_mcc 0.578
+V_loss 0.799	V_acc 0.630	V_pre 0.625	V_rec 0.614	V_fscore 0.620	V_mcc 0.260
+Epoch 29 Time  7m 47s
+T_loss 0.335	T_acc 0.774	T_pre 0.832	T_rec 0.803	T_fscore 0.817	T_mcc 0.639
+V_loss 0.984	V_acc 0.597	V_pre 0.581	V_rec 0.644	V_fscore 0.611	V_mcc 0.197
+78	T_fscore 0.786	T_mcc 0.574
+V_loss 0.781	V_acc 0.610	V_pre 0.601	V_rec 0.612	V_fscore 0.606	V_mcc 0.221
+Epoch 29 Time  0m 13s
+T_loss 0.352	T_acc 0.766	T_pre 0.818	T_rec 0.801	T_fscore 0.810	T_mcc 0.626
+V_loss 0.934	V_acc 0.609	V_pre 0.591	V_rec 0.662	V_fscore 0.624	V_mcc 0.222
+Epoch 39 Time  0m 18s
+T_loss 0.295	T_acc 0.788	T_pre 0.841	T_rec 0.826	T_fscore 0.834	T_mcc 0.669
+V_loss 1.146	V_acc 0.608	V_pre 0.597	V_rec 0.616	V_fscore 0.606	V_mcc 0.216
+Epoch 49 Time  0m 22s
+T_loss 0.246	T_acc 0.796	T_pre 0.851	T_rec 0.834	T_fscore 0.842	T_mcc 0.687
+V_loss 1.482	V_acc 0.601	V_pre 0.591	V_rec 0.602	V_fscore 0.596	V_mcc 0.201
+Epoch 59 Time  0m 27s
+T_loss 0.237	T_acc 0.798	T_pre 0.850	T_rec 0.838	T_fscore 0.844	T_mcc 0.690
+V_loss 1.582	V_acc 0.602	V_pre 0.592	V_rec 0.611	V_fscore 0.601	V_mcc 0.205
+Epoch 69 Time  0m 31s
+T_loss 0.230	T_acc 0.802	T_pre 0.854	T_rec 0.843	T_fscore 0.849	T_mcc 0.702
+V_loss 1.755	V_acc 0.599	V_pre 0.590	V_rec 0.596	V_fscore 0.593	V_mcc 0.198
+Epoch 79 Time  0m 36s
+T_loss 0.220	T_acc 0.794	T_pre 0.855	T_rec 0.822	T_fscore 0.838	T_mcc 0.682
+V_loss 1.945	V_acc 0.582	V_pre 0.571	V_rec 0.600	V_fscore 0.585	V_mcc 0.166
+Epoch 89 Time  0m 41s
+T_loss 0.218	T_acc 0.792	T_pre 0.843	T_rec 0.834	T_fscore 0.838	T_mcc 0.678
+V_loss 2.049	V_acc 0.590	V_pre 0.578	V_rec 0.607	V_fscore 0.592	V_mcc 0.181
+Epoch 99 Time  0m 46s
+T_loss 0.224	T_acc 0.799	T_pre 0.856	T_rec 0.833	T_fscore 0.845	T_mcc 0.693
+V_loss 1.773	V_acc 0.602	V_pre 0.591	V_rec 0.612	V_fscore 0.602	V_mcc 0.205
+
+Best results: Epoch 10 
+ V_loss 0.670	V_acc 0.636	V_pre 0.612	V_rec 0.708	V_fscore 0.656	V_mcc 0.278
