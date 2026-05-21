@@ -25,8 +25,8 @@ class RNNModel(nn.Module):
         return scores, dummy_weights
 
     def init_hidden(self, batch_size: int) -> torch.Tensor:
+        device = next(self.parameters()).device
         if self.cell_type == 'LSTM':
-            h_init = torch.zeros(1, batch_size, self.hidden_size)
-            c_init = torch.zeros(1, batch_size, self.hidden_size)
-            return (h_init, c_init)
-        return torch.zeros(1, batch_size, self.hidden_size)
+            return (torch.zeros(1, batch_size, self.hidden_size, device=device),
+                    torch.zeros(1, batch_size, self.hidden_size, device=device))
+        return torch.zeros(1, batch_size, self.hidden_size, device=device)

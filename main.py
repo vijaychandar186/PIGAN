@@ -22,8 +22,8 @@ def main():
         3: './processed/COV19/triplet_cluster'
     }
     
-    model_options = ['transformer', 'lstm', 'gru', 'rnn', 'attention', 'da-rnn', 'svm', 'random forest', 'logistic regression', 'mutagan']
-    models_to_run = ['transformer','mutagan']
+    model_options = ['transformer', 'lstm', 'gru', 'rnn', 'attention', 'da-rnn', 'svm', 'random forest', 'logistic regression', 'mutagan', 'pigan', 'lightgbm', 'gradient boosting']
+    models_to_run = ['svm', 'logistic regression', 'random forest', 'lightgbm', 'gradient boosting', 'rnn', 'lstm', 'attention', 'transformer', 'mutagan', 'pigan']
     
     for model in models_to_run:
         print(f"\nExperimental results with model {model} on subtype {subtype}:")

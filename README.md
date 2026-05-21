@@ -210,6 +210,26 @@ This repository builds upon prior open-source works and academic publications. C
 
 ---
 
+## 📄 Citation
+
+If you use this work, cite:
+
+```bibtex
+@inproceedings{chandar2024pigan,
+  author    = {Chandar, V. and Nair, V. G. and D, R.},
+  title     = {Phylogenetic-Informed Generative Adversarial Network for Predicting Mutations in SARS-CoV-2},
+  booktitle = {2024 2nd International Conference on Networking and Communications (ICNWC)},
+  year      = {2024},
+  pages     = {1--7},
+  address   = {Chennai, India},
+  doi       = {10.1109/ICNWC60771.2024.10537523}
+}
+```
+
+> V. Chandar, V. G. Nair and R. D, "Phylogenetic-Informed Generative Adversarial Network for Predicting Mutations in SARS-CoV-2," *2024 2nd International Conference on Networking and Communications (ICNWC)*, Chennai, India, 2024, pp. 1-7, doi: [10.1109/ICNWC60771.2024.10537523](https://ieeexplore.ieee.org/abstract/document/10537523/).
+
+---
+
 ## 👤 Author
 
 **Vijay Chandar**

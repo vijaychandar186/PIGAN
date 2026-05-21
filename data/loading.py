@@ -1,3 +1,4 @@
+import math
 import pandas as pd
 import os
 import numpy as np
@@ -11,7 +12,8 @@ def select_subtype(subtype: str) -> int:
 
 def load_trigram_vectors(subtype: str) -> tuple:
     """Load trigram vectors and their indices from ProtVec file."""
-    df = pd.read_csv(PROT_VEC_PATH, delimiter='\t')
+    _path = os.environ.get('PROT_VEC_PATH', PROT_VEC_PATH)
+    df = pd.read_csv(_path, delimiter='\t')
     trigram_to_idx = {trigram: i for i, trigram in enumerate(df['words'])}
     trigram_vectors = df.loc[:, df.columns != 'words'].values
     return trigram_to_idx, trigram_vectors

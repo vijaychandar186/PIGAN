@@ -2,28 +2,37 @@ import torch
 import torch.nn as nn
 
 class TransformerModel(nn.Module):
-    """Transformer model for sequence classification."""
-    def __init__(self, input_dim: int, output_dim: int, dropout_p: float):
-        super().__init__()
+    """
+    A temporal attention model using an Transformer encoder.
+    """
+
+    def __init__(self, input_dim, output_dim, dropout_p, hidden_size: int = 256):
+        super(TransformerModel, self).__init__()
         self.input_dim = input_dim
         self.output_dim = output_dim
-        self.hidden_size = 128
         self.dropout = nn.Dropout(dropout_p)
-        self.encoder_layer = nn.TransformerEncoderLayer(d_model=input_dim, nhead=5)
-        self.transformer_encoder = nn.TransformerEncoder(self.encoder_layer, num_layers=2)
-        self.fnn = nn.Linear(input_dim, output_dim)
+        encoder_layer = nn.TransformerEncoderLayer(
+            d_model=input_dim, nhead=5, dim_feedforward=hidden_size,
+            dropout=0.1, batch_first=False, norm_first=False,
+        )
+        self.transformer_encoder = nn.TransformerEncoder(
+            encoder_layer, num_layers=2, enable_nested_tensor=False
+        )
+        self.classifier = nn.Sequential(
+            nn.Dropout(0.2),
+            nn.Linear(input_dim, 128),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.2),
+            nn.Linear(128, 64),
+            nn.LeakyReLU(0.1),
+            nn.Dropout(0.2),
+            nn.Linear(64, output_dim),
+        )
 
-    def forward(self, input_seq: torch.Tensor, hidden_state: torch.Tensor) -> tuple:
-        out = self.dropout(input_seq)
-        out = self.transformer_encoder(out)
-        out = out[-1, :, :]
-        out = self.fnn(out)
+    def forward(self, input_seq, hidden_state):
+        out = self.transformer_encoder(self.dropout(input_seq))
+        out = self.classifier(out[-1, :, :])
         return out, out
 
-    def init_hidden(self, batch_size: int) -> tuple:
-        h_init = torch.zeros(1, batch_size, self.hidden_size)
-        c_init = torch.zeros(1, batch_size, self.hidden_size)
-        device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        h_init = h_init.to(device)
-        c_init = c_init.to(device)
-        return (h_init, c_init)
+    def init_hidden(self, batch_size):
+        return None

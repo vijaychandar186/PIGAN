@@ -90,6 +90,6 @@ class DualAttentionRNNModel(nn.Module):
         return context, beta
 
     def init_hidden(self, batch_size: int) -> tuple:
-        h_init = torch.zeros(1, batch_size, self.hidden_size)
-        c_init = torch.zeros(1, batch_size, self.hidden_size)
-        return (h_init, c_init)
+        device = next(self.parameters()).device
+        return (torch.zeros(1, batch_size, self.hidden_size, device=device),
+                torch.zeros(1, batch_size, self.hidden_size, device=device))
