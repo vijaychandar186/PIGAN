@@ -2,7 +2,7 @@
 
 **PIGAN (Phylogenetic Informed Generative Adversarial Network)** is a PyTorch-based framework for predicting amino-acid mutations in influenza viruses (H1N1, H3N2, H5N1) and SARS-CoV-2 (COV19). It integrates deep-learning models (RNN, LSTM, GRU, Transformer, Attention, MutaGAN-inspired GAN) with classical machine learning baselines (SVM, Random Forest, kNN, Naïve Bayes, Logistic Regression). Models are trained on **ProtVec trigram embeddings** and evaluated using standard classification metrics.
 
-## 🔧 Requirements
+## Requirements
 
 * Python >= 3.12.1
 * PyTorch >= 2.7.0
@@ -46,7 +46,7 @@ To activate the Poetry virtual environment:
 poetry shell
 ```
 
-## 📁 Data Preparation
+## Data Preparation
 
 1. Download and place `data.zip` in the root directory (`/workspaces/PIGAN/`).
 2. Unzip it:
@@ -69,7 +69,7 @@ Ensure the folder structure is correct to avoid errors.
 
 ---
 
-## 🚀 Usage
+## Usage
 
 ### Local Execution
 
@@ -171,14 +171,14 @@ To run PIGAN using Docker, follow these steps to build and run the container, an
 
 ---
 
-## 📊 Visualizations
+## Visualizations
 
 * Training/validation loss and accuracy plots using Matplotlib.
 * Attention heatmaps (if applicable).
 
 ---
 
-## 📜 Attribution & References
+## Attribution & References
 
 ### Codebases
 
@@ -204,13 +204,13 @@ Please cite these works if you use PIGAN in your research.
 
 ---
 
-## 🙏 Ethical Use & Contribution
+## Ethical Use & Contribution
 
 This repository builds upon prior open-source works and academic publications. Credit and attribution are given throughout the code and documentation. Contributions and issues are welcome.
 
 ---
 
-## 📄 Citation
+## Citation
 
 If you use this work, cite:
 
@@ -230,7 +230,7 @@ If you use this work, cite:
 
 ---
 
-## 👤 Author
+## Author
 
 **Vijay Chandar**
 *(Pull requests & issues welcome!)*
